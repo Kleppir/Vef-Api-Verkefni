@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import CardInfo from './CardInfo';
+import './App.css';
 
 function App() {
     return (
