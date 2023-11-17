@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
-function CardInfo() {
+function CardInfo({ searchTerm }) {
+    
     const [cards, setCards] = useState([]);
 
     useEffect(() => {
@@ -35,7 +36,7 @@ function CardInfo() {
 
     return (
         <div className="card-grid">
-            {cards.map((card) => (
+            {cards.filter(card => card.name.toLowerCase().includes(searchTerm.toLowerCase())).map((card) => (
                 <div key={card.id} className="card">
                     <div className="cardContent">
                         <h2>{card.name}</h2>
